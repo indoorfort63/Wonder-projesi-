@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnAi" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:text="Yapay Zeka" />
+        <Button android:id="@+id/btnYt" android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="wrap_content" android:text="YouTube" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/panelAi" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical">
+        <ListView android:id="@+id/chatList" android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="1"
+            android:transcriptMode="alwaysScroll" android:stackFromBottom="true"
+            android:divider="@android:color/transparent" android:dividerHeight="4dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/chatInput" android:layout_width="0dp"
+                android:layout_weight="1" android:layout_height="wrap_content"
+                android:hint="Mesaj yaz..." />
+            <Button android:id="@+id/chatSend" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Gönder" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/panelYt" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/ytInput" android:layout_width="0dp"
+                android:layout_weight="1" android:layout_height="wrap_content"
+                android:hint="Video ara..." android:singleLine="true" />
+            <Button android:id="@+id/ytSearch" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Ara" />
+        </LinearLayout>
+        <ListView android:id="@+id/ytList" android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>
